@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700&display=swap');
 .App {
   text-align: center;
 }
@@ -15,13 +16,28 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-repeat: repeat;
+  background-position: 0 50%;
+
+}
+.App-header::after{
+content:"";
+position: absolute;
+width:100%;
+height:100%;
+background-color:rgba(16, 23, 32, 0.95)
+}
+
+.App-header h2,.App-header p{
+z-index: 9999;
 }
 
 .App-link {
@@ -37,11 +53,29 @@
   }
 }
 
-/*MY STYLES*/
-
-html,body{
-  margin:0;
-  padding:0;
+h1,h2{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+h3,h4{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+span,p,a{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+strong{
+  font-weight: 500;
+}
+a{
+  text-decoration: none;
+  font-weight: 500;
+  color:blue;
+  font-style: italic;
 }
 
 .userBanner{
@@ -51,4 +85,9 @@ html,body{
   background-position: 0 50%;
   background-size: cover;
 
+}
+.followers{
+  margin:20px auto 60px;
+  width: fit-content;
+  display: block
 }
